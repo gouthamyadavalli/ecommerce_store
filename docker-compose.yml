@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      SECRET_KEY: 'your_secret_key'
+      DATABASE_URL: 'sqlite:///ecommerce.db'  # For simplicity; replace with a proper DB in production
+    volumes:
+      - .:/app

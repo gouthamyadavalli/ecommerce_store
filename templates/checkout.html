@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Checkout</h1>
+    <div class="checkout-list">
+        {% for product in products %}
+            <div class="checkout-item">
+                <h2>{{ product.name }}</h2>
+                <p><strong>${{ product.price }}</strong></p>
+            </div>
+        {% endfor %}
+    </div>
+    <h3>Total: ${{ total }}</h3>
+    <p>Checkout logic goes here (e.g., payment gateway integration).</p>
+    <a href="#" class="button">Confirm Purchase</a>
+{% endblock %}
